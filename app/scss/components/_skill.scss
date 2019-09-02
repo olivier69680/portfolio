@@ -1,0 +1,25 @@
+.skills{
+    height: 90vh ;
+}
+.skill {
+    padding: $gutter-very-large $gutter-large;
+    position: relative;
+
+    &__name {
+        font: {
+            size: 1.25rem;
+            weight: 700;
+        }
+        margin-bottom: $gutter-large;
+    }
+
+    &__icon {
+        background-color: $color-primary;
+        border-radius: .35rem;
+        color: $color-text-secondary;
+        padding: $gutter;
+        position: absolute;
+        right: $gutter;
+        top: $gutter;
+    }
+}

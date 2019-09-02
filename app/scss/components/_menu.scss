@@ -1,0 +1,33 @@
+.menu {
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+            margin: 0 $gutter-small;
+        }
+    }
+
+    &--vertical {
+        .menu__list {
+            flex-direction: column;
+
+            &__item {
+                border-bottom: {
+                    style: solid;
+                    width: $border-width-thin;
+                }
+                padding-bottom: $gutter-small;
+                margin-bottom: $gutter;
+                text: {
+                    align: center;
+                    transform: uppercase;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

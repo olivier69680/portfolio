@@ -1,0 +1,69 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    grid-area: posts;
+
+    .post {
+        min-height: 50vh;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            background-color: #000;
+            bottom: 0;
+            content: '';
+            left: 0;
+            opacity: 0.85;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity $duration;
+            z-index: -1;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 0;
+            }
+        }
+
+
+        
+        $posts-background-color-count: length($color-posts-backgrounds);
+
+        @each $number, $background-color in $color-posts-backgrounds {
+            &:nth-child(#{$posts-background-color-count}n + #{$number}) {
+                &::after {
+                    background-color: $background-color;
+                }
+            }
+        }
+
+        
+    }
+
+    @include media(medium) {
+        flex: {
+            direction: row;
+            wrap: wrap;
+        }
+
+        .post {
+            width: 50%;
+        }
+    }
+
+    @include media(large) {
+        .post {
+            &:nth-child(4n + 1),
+            &:nth-child(4n + 4) {
+                width: 55%;
+            }
+
+            &:nth-child(4n + 2),
+            &:nth-child(4n + 3) {
+                width: 45%;
+            }
+        }
+    }
+}

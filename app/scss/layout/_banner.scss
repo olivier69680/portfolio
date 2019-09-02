@@ -1,0 +1,92 @@
+.banner {
+    background: {
+        position: center right;
+        size: cover;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-area: banner;
+    position: relative;
+    z-index: 0;
+
+    // Je sélectionne tous les enfants directs de .banner
+    > * {
+        color: $color-text-secondary;
+        margin-left: $gutter-very-large;
+        width: $width-banner-content;
+    }
+
+    &__header {
+        margin-bottom: $gutter-large;
+
+        &__title {
+            font: {
+                size: 2rem;
+                weight: 700;
+            }
+        }
+    }
+
+    &__main {
+        margin-bottom: $gutter-large;
+         &__description{
+             font-size: 1.3rem ;
+         }
+    }
+
+    &__footer {
+        margin-bottom: $gutter-very-large;
+
+        &__nav {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+
+            &__link {
+                border: $border-width solid white;
+                color: white;
+                font-family: $font-stack-serif;
+                padding: $gutter-small ($gutter * 3) $gutter-small $gutter;
+                margin-bottom: $gutter;
+                position: relative;
+                text-transform: uppercase;
+                transition: border-color $duration-slow,
+                            color $duration-slow,
+                            padding-right $duration;
+
+                &:hover {
+                    border-color: $color-secondary;
+                    color: $color-secondary;
+                    padding-right: ($gutter * 6);
+                    text-decoration: none;
+                }
+
+                &::after {
+                    @include fa-icon;
+
+                    content: $fa-var-long-arrow-right;
+                    position: absolute;
+                    right: $gutter;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    &::after {
+        background: linear-gradient(
+            to right,
+            $color-banner-text-background -10%,
+            transparent
+        );
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    
+}

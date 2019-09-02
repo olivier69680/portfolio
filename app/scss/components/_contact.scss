@@ -1,0 +1,118 @@
+.message {
+    background-color: $color-tertiary;
+    opacity: 0.8 ;
+    display: flex;
+    flex-direction: column;
+    grid-area: footer;
+    padding: $gutter;
+    
+    
+    left: $gutter-large ;
+    bottom: $gutter-very-large ;
+    &__contact-informations {
+        padding: $gutter-large;
+
+        .information {
+            border-bottom: $border-width-thin solid lighten($color-tertiary, 25%);
+            margin-top: 2.5em ;
+           
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            &__title {
+                color: $color-text-secondary;
+                padding-bottom: $gutter ;
+                font: {
+                    family: $font-stack-serif;
+                }
+            }
+
+            &__value {
+                color: lighten($color-tertiary, 50%);
+
+                &[href] {
+                    color:
+                    $color-text-secondary;
+                }
+            }
+
+            &__icon {
+                color: lighten($color-tertiary, 50%);
+            }
+        }
+    }
+
+    @include media(large) {
+        flex-direction: row;
+        padding: $gutter-very-large;
+
+        .contact {
+            
+            padding: {
+                right: $gutter-large;
+                top: $gutter-large + $gutter;
+            }
+            width: 60%;
+
+            &__fields-group {
+                &:first-child {
+                    flex: {
+                        direction: row;
+                        wrap: wrap;
+                    }
+                    justify-content: space-between;
+
+                    .field {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        &__contact-informations {
+            padding-left: 0;
+        }
+    }
+}
+
+.contact {
+    &__fields-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $gutter;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: $gutter-small;
+        }
+
+        .field {
+            margin-bottom: $gutter;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__label {
+                color: $color-text-secondary;
+            }
+
+            &__input {
+                background-color: lighten($color-tertiary, 10%);
+                color: $color-text-secondary;
+            }
+        }
+    }
+
+    &__submit {
+        background-color: $color-text-secondary;
+        border: none;
+        color: $color-tertiary;
+        font: {
+            size: .9rem;
+            weight: bold;
+        }
+        padding: $gutter * 0.75;
+    }
+}

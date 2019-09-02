@@ -1,0 +1,26 @@
+
+
+.post {
+    background-size: cover;
+    color: $color-text-secondary;
+    display: flex;
+    flex-direction: column;
+    padding: $gutter-large;
+    
+
+    &__title {
+        border-bottom: $border-width solid $color-text-secondary;
+        font: {
+            size: 1.5rem;
+            weight: 700;
+        };
+        margin-bottom: $gutter-large;
+        padding-bottom: $gutter-small;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: $color-text-secondary;
+        margin-top: $gutter-large;
+    }
+}

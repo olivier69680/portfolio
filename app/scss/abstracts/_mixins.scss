@@ -1,0 +1,32 @@
+@mixin media($breakpoint-name) {
+    @if ($breakpoint-name == medium) {
+        @media (min-width: $breakpoint-medium) {
+            @content;
+        }
+    }
+    @else if ($breakpoint-name == large) {
+        @media (min-width: $breakpoint-large) {
+            @content;
+        }
+    }
+    @else if ($breakpoint-name == wordpress-mobile) {
+        @media (max-width: $breakpoint-wordpress-mobile) {
+            @content;
+        }
+    }
+}
+
+/*
+// Ou
+@mixin media-medium() {
+    @media (min-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin media-large() {
+    @media (min-width: $breakpoint-large) {
+        @content;
+    }
+}
+*/

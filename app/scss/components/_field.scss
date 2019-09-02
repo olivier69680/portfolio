@@ -1,0 +1,20 @@
+.field {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        font: {
+            family: $font-stack-serif;
+            weight: 700;
+        }
+        margin-bottom: $gutter-small;
+    }
+
+    &__input {
+        border: none;
+        font-size: 1rem;
+        padding: $gutter-small $gutter;
+        resize: vertical;
+        width: 100%;
+    }
+}

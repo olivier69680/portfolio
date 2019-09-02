@@ -1,0 +1,31 @@
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: $gutter $gutter $gutter $gutter-very-large;
+    position: relative;
+
+    &__title {
+        font: {
+            size: 1.5rem;
+            weight: 700;
+        }
+        margin-bottom: $gutter-large;
+    }
+
+    &__value {
+        font-weight: 700;
+        line-height: 1.5rem;
+
+        &--uppercase {
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        position: absolute;
+        left: $gutter;
+        top: $gutter;
+    }
+}

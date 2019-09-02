@@ -1,0 +1,33 @@
+.footer{
+
+    display: flex;
+    justify-content: center;
+   justify-content: space-around ;
+   background: rgb(33,23,75);
+    background: linear-gradient(90deg, rgba(33,23,75,1) 20%, rgba(156,66,13,1) 80%, rgba(219,129,41,1) 100%);
+  
+}
+.widget{
+    color: white ;
+    margin: 2em;
+    
+      &__title{
+         
+          font-size: 1.5em ;
+            &--content{
+                margin: $gutter-large ;
+                font-size: 1.2em ;
+                    
+            }
+       
+    }
+      
+            
+}
+.widget__title--content a{
+    color: white ;
+    text-decoration: none ; 
+        &:hover{
+            border: 1px solid white ;
+        }
+}

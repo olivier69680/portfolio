@@ -1,0 +1,50 @@
+$border-width: 3px;
+$border-width-thin: 1px;
+
+$breakpoint-medium: 600px;
+$breakpoint-large: 900px;
+
+$color-primary: #21174b;
+$color-secondary: #9c420d;
+$color-tertiary:#21174b ;
+
+$color-text: rgba(0, 0, 0, 1);
+$color-text-secondary: rgba(255, 255, 255, 1);
+
+$color-banner-text-background: #000;
+
+// Type: map (équivalent au tableau associatif PHP)
+// https://sass-lang.com/documentation/values/maps
+$color-posts-backgrounds: (
+    1:#21174b,
+	2: $color-secondary,
+	3: #db8129,
+	4: #7b080d,
+	5: #21174b,
+    6: #9c420d
+);
+
+$color-skills-background: #F4F5F9;
+$color-skills-border: #D2D2D2;
+
+$duration: .5s;
+$duration-fast: $duration / 2;
+$duration-slow: $duration * 2;
+
+$font-stack: 'Roboto', sans-serif;
+$font-stack-serif: 'Roboto Slab', serif;
+
+// Font Awesome
+$fa-font-path: '~font-awesome/fonts';
+
+$gutter: 1rem;
+$gutter-large: $gutter * 2;
+$gutter-small: $gutter / 2;
+$gutter-very-large: $gutter-large * 2;
+$gutter-very-small: $gutter-small / 2;
+
+$width-banner-content: 50%;
+
+$breakpoint-wordpress-mobile: 782px;
+$wordpress-admin-bar-height: 32px;
+$wordpress-admin-bar-height-mobile: 46px;

@@ -1,0 +1,37 @@
+.home {
+    display: grid;
+    grid: {
+        template: {
+            areas: "banner"
+                   "posts"
+                   "skills"
+                   "footer";
+            columns: 100%;
+            rows: 100vh auto auto auto;
+        }
+    }
+
+    > * {
+        transition: filter $duration-fast;
+    }
+
+    &.blur {
+        .header,
+        .banner,
+        .posts,
+        .skills,
+        .footer {
+            filter: blur(.5rem);
+        }
+    }
+
+    &.admin-bar {
+        .header {
+            top: $wordpress-admin-bar-height;
+
+            @include media(wordpress-mobile) {
+                top: $wordpress-admin-bar-height-mobile;
+            }
+        }
+    }
+}

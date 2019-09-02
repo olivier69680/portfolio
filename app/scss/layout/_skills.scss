@@ -1,0 +1,40 @@
+.skills {
+    background-color: $color-skills-background;
+    border: {
+        color: $color-skills-border;
+        radius: .25rem;
+        style: solid;
+        width: $border-width-thin;
+    }
+    display: flex;
+    flex-direction: column;
+    grid-area: skills;
+    margin: $gutter-very-large;
+
+    @include media(large) {
+        flex: {
+            direction: row;
+            wrap: wrap;
+        }
+    }
+
+    .skill {
+        border-bottom: $border-width-thin solid $color-skills-border;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @include media(large) {
+            width: 50%;
+
+            &:nth-child(odd) {
+                border-right: $border-width-thin solid $color-skills-border;
+            }
+
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+        }
+    }
+}

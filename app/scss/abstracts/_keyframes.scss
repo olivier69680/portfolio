@@ -1,0 +1,31 @@
+@keyframes slidein {
+    0%  {
+        transform: translateY(-100%);
+    }
+    /*25% {
+        transform: translateY(-75%);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    75% {
+        transform: translateY(-25%);
+
+    }*/
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes color {
+    0% {
+        background: #F00;
+    }
+    50% {
+        background: #0F0;
+    }
+    100% {
+        background: #00F;
+    }
+}
